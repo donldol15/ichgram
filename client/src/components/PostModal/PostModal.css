@@ -1,0 +1,411 @@
+.post-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 2000;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.post-modal {
+    width: min(1100px, 95vw);
+    height: min(700px, 90vh);
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    border-radius: 4px;
+    color: #262626;
+}
+
+.post-modal-image {
+    flex: 1;
+    min-width: 0;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.post-modal-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.post-modal-content {
+    width: 390px;
+    min-width: 390px;
+    height: 100%;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #fff;
+}
+
+.post-modal-header {
+    height: 60px;
+    min-height: 60px;
+    padding: 0 16px;
+    border-bottom: 1px solid #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-shrink: 0;
+}
+
+.post-modal-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.post-modal-user img,
+.post-modal-avatar-placeholder {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-modal-avatar-placeholder {
+    background: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+
+.post-modal-dots {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #262626;
+}
+
+.post-modal-menu-wrapper {
+    position: relative;
+}
+
+.post-modal-menu {
+    position: absolute;
+    top: 35px;
+    right: 0;
+    width: 160px;
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    z-index: 5;
+    overflow: hidden;
+}
+
+.post-modal-menu button {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-size: 13px;
+}
+
+.post-modal-menu button:hover {
+    background: #f5f5f5;
+}
+
+.post-modal-menu .delete-option {
+    color: #ed4956;
+    border-top: 1px solid #eee;
+}
+
+/* Комментарии */
+
+.post-modal-comments {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 16px;
+}
+
+.post-modal-caption {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.post-modal-caption strong {
+    flex-shrink: 0;
+    font-weight: 600;
+}
+
+/* Один комментарий */
+
+.post-modal-comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Аватар комментария */
+
+/* Аватар комментария */
+.post-modal-comment-avatar {
+    width: 34px;
+    height: 34px;
+    min-width: 34px;
+    max-width: 34px;
+    flex: 0 0 34px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-modal-comment-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+}
+
+.post-modal-comment-placeholder {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: #e8e8e8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 14px;
+    color: #555;
+}
+/* Текст комментария */
+
+.post-modal-comment-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.post-modal-comment-text {
+    display: block;
+    overflow-wrap: anywhere;
+}
+
+.post-modal-comment-text strong {
+    font-weight: 600;
+    margin-right: 6px;
+}
+
+/* Время и лайки */
+
+.post-modal-comment-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 6px;
+    color: #8e8e8e;
+    font-size: 11px;
+}
+
+.post-modal-comment-time {
+    color: #8e8e8e;
+}
+
+.post-modal-comment-likes {
+    color: #8e8e8e;
+    font-weight: 500;
+}
+
+.post-modal-comment-like {
+    border: none;
+    background: none;
+    padding: 3px;
+    cursor: pointer;
+    color: #262626;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.post-modal-comment-like.liked {
+    color: #ed4956;
+}
+
+.post-modal-comment-like:hover {
+    opacity: 0.7;
+}
+
+.post-modal-comment-delete {
+    border: none;
+    background: none;
+    color: #999;
+    font-size: 19px;
+    cursor: pointer;
+    padding: 0 3px;
+}
+
+.post-modal-comment-delete:hover {
+    color: #ed4956;
+}
+
+.post-modal-info {
+    color: #888;
+    font-size: 13px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Лайки публикации */
+
+.post-modal-actions {
+    border-top: 1px solid #efefef;
+    flex-shrink: 0;
+}
+
+.post-modal-action-buttons {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.post-modal-action-buttons button {
+    font-size: 30px;
+    line-height: 1;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #262626;
+}
+
+.post-modal-action-buttons button.liked {
+    color: #ed4956;
+}
+
+/* Добавление комментария */
+
+.post-modal-comment-form {
+    height: 50px;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #efefef;
+    padding: 0 16px;
+    flex-shrink: 0;
+}
+
+.post-modal-comment-form input {
+    flex: 1;
+    min-width: 0;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+
+.post-modal-comment-form button {
+    background: none;
+    border: none;
+    color: #0095f6;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.post-modal-comment-form button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+/* Закрытие окна */
+
+.post-modal-close {
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 38px;
+    cursor: pointer;
+    z-index: 2001;
+}
+
+/* Редактирование публикации */
+
+.post-modal-edit {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    overflow-y: auto;
+}
+
+.post-modal-edit h3 {
+    margin: 0;
+    font-size: 17px;
+}
+
+.post-modal-edit textarea {
+    min-height: 120px;
+    resize: vertical;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+.post-modal-file {
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.post-modal-file input {
+    display: block;
+    margin-top: 8px;
+    max-width: 100%;
+}
+
+.post-modal-edit-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.post-modal-edit-buttons button {
+    border: none;
+    border-radius: 5px;
+    padding: 9px 16px;
+    cursor: pointer;
+}
+
+.post-modal-edit-buttons button:last-child {
+    background: #0095f6;
+    color: white;
+}
+
+/* Ошибки */
+
+.post-modal-error {
+    color: #ed4956;
+    font-size: 13px;
+    padding: 0 16px 10px;
+    flex-shrink: 0;
+}

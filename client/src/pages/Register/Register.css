@@ -1,0 +1,150 @@
+.register-page {
+    min-height: 100vh;
+    background: #fafafa;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 81px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.register-container {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.register-card {
+    width: 350px;
+    height: 554px;
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    box-sizing: border-box;
+    padding: 19px 41px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.register-logo {
+    width: 190px;
+    height: 106px;
+    object-fit: contain;
+}
+
+.register-description {
+    width: 256px;
+    height: 37px;
+    text-align: center;
+    color: #737373;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+}
+
+.register-form {
+    width: 268px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.register-form input {
+    width: 268px;
+    height: 38px;
+    border: 1px solid #dbdbdb;
+    border-radius: 3px;
+    background: #fafafa;
+    box-sizing: border-box;
+    padding: 0 8px;
+    font-size: 12px;
+    outline: none;
+}
+
+.register-form input:focus {
+    border-color: #a8a8a8;
+}
+
+.register-info {
+    color: #8e8e8e;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    margin: 20px 0 0;
+}
+
+.register-info a,
+.register-terms a {
+    color: #00376b;
+    text-decoration: none;
+}
+
+.register-terms {
+    width: 268px;
+    /* height: 80px; */
+    color: #8e8e8e;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    margin: 8px 0 0;
+}
+
+.register-button {
+    width: 268px;
+    height: 32px;
+    border: none;
+    border-radius: 6px;
+    background: #0095f6;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.register-login-card {
+    width: 350px;
+    height: 70px;
+    border: 1px solid #dbdbdb;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.register-login-card a {
+    color: #0095f6;
+    text-decoration: none;
+}
+
+
+.register-field {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.register-field-error {
+    color: #FF0014;
+    font-size: 12px;
+    line-height: 12px;
+}
+
+.register-error {
+    color: #ed4956;
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+    margin: 5px 0 0;
+}
+
+.register-button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
